@@ -10,7 +10,7 @@ const getAllProducts = async () => {
 
 // get product by id from server
 const getProductById = async (id) => {
-  const protuct = await axios.get(`${url}/${id}`);
+  const { data: protuct } = await axios.get(`${url}/${id}`);
   return protuct;
 };
 
@@ -23,4 +23,17 @@ const createProduct = async (newProductData) => {
 const updateProduct = async (id, obj) => {
   const { data: status } = await axios.put(`${url}/${id}`, obj);
   return status;
+};
+
+const deleteProduct = async (id) => {
+  const { data: status } = await axios.delete(`${url}/${id}`);
+  return status;
+};
+
+export {
+  getAllProducts,
+  getProductById,
+  createProduct,
+  updateProduct,
+  deleteProduct,
 };
