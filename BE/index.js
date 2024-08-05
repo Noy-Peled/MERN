@@ -14,11 +14,11 @@ connect("mongodb://127.0.0.1:27017/MERN").then(() =>
 app.use(cors());
 app.use(express.json());
 
-// products controller
+// products router
 const productsController = require("./controllers/productsController");
 app.use("/api/products", productsController);
 
-// customers controller
+// customers router
 const customersController = require("./controllers/customersController");
 app.use("/api/customers", customersController);
 
