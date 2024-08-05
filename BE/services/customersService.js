@@ -2,18 +2,16 @@ const axios = require("axios");
 
 const url = "https://jsonplaceholder.typicode.com/users";
 
-async function getCustumers() {
+async function getCustomers() {
   const { data: users } = await axios.get(url);
-  const custumers = users.map((user) => {
+  const customers = users.map((user) => {
     return {
       name: user.name,
       email: user.email,
       city: user.address.city,
     };
   });
-  return custumers;
+  return customers;
 }
 
-getCustumers().then((data) => console.log(data));
-
-module.exports = { getCustumers };
+module.exports = { getCustomers };
