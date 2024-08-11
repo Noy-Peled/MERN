@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { createProduct } from "../services/productService";
+import "../CSS/compStyle.css";
 
 function New_Product() {
   // State to manage the new product's details
@@ -26,7 +27,7 @@ function New_Product() {
 
   // Return div with inputs for create a new product and a button to send the data
   return (
-    <div>
+    <div className="compStyle">
       <h2>Add New Product</h2>
 
       <div className="textGroup">
@@ -42,6 +43,7 @@ function New_Product() {
         <span>Price:</span>
         <input
           name="price"
+          min={0}
           type="number"
           placeholder="add the product price"
           onChange={inputHendler}
