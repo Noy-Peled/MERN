@@ -15,7 +15,7 @@ function Customer_Page() {
   }, []);
 
   return (
-    <div>
+    <div className="compStyle">
       <h2> Customers:</h2>
       <table border={"1px solig black"}>
         <thead>
