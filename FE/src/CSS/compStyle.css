@@ -1,26 +1,6 @@
-span {
-  font-family: sans-serif;
-}
-
-label {
-  font-family: sans-serif;
-  font-size: x-small;
-  display: contents;
-  cursor: pointer;
-}
-
-input {
-  border-radius: 3px;
-}
-
-h2 {
-  font-family: sans-serif;
-  align-self: center;
-}
-
-div {
+.compStyle {
   background-color: rgb(214, 234, 246);
-  border-radius: 10px;
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,15 +8,31 @@ div {
   max-width: 600px;
   height: auto;
   gap: 5px;
+  border-radius: 10px;
 }
 
-.textGroup {
+.compStyle label {
+  font-size: x-small;
+  display: contents;
+  cursor: pointer;
+}
+
+.compStyle input {
+  border-radius: 3px;
+}
+
+.compStyle h2 {
+  align-self: center;
+}
+
+.compStyle .textGroup {
   display: flex;
+  align-self: center;
   flex-direction: row;
   gap: 5px;
 }
 
-button {
+.compStyle button {
   background-color: rgb(214, 234, 246);
   text-align: center;
   width: 100px;
@@ -45,7 +41,12 @@ button {
   border-radius: 3px;
 }
 
-button:hover:not(.active) {
+.compStyle button:hover:not(.active) {
   background-color: rgb(186, 220, 241);
   cursor: pointer;
+}
+
+.compStyle table {
+  border: 1px solid black;
+  border-radius: 3px;
 }
